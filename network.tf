@@ -1,31 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "3.26.0"
-    }
-    random = {
-      source  = "hashicorp/random"
-      version = "3.0.1"
-    }
-  }
-  required_version = ">= 0.14"
-
-  backend "remote" {
-    hostname = "app.terraform.io"
-    organization = "demo_hjkim"
-
-    workspaces {
-      name = "Terraform-on-AWS-global-demo"
-    }
-  }
-}
-
-
-provider "aws" {
-  region = "ap-southeast-1"
-}
-
 #vpc, cidr 생성
 resource "aws_vpc" "vpc-lsi-tfdemo-tokyo" { 
     cidr_block = "10.80.0.0/16"
