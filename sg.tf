@@ -8,12 +8,12 @@ resource "aws_security_group" "lsi-tfdemo-web-prd-a-sg" {
     protocol    = "tcp"                #사용할 프로토콜
     cidr_blocks = ["211.168.91.10/32"] #허용할 IP 범위
   }
-  ingress {
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["211.168.91.10/32"]
-  }
+  # ingress {
+  #   from_port   = 80
+  #   to_port     = 80
+  #   protocol    = "tcp"
+  #   cidr_blocks = ["211.168.91.10/32"]
+  # }
 
   egress {
     from_port   = 0
