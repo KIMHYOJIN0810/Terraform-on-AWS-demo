@@ -1,7 +1,7 @@
 
 #bastion_server 생성
 resource "aws_instance" "lsi-tfdemo-web-prd-a-hjkim" {
-  ami               = "ami-0534dbc0328408111"
+  ami               = "ami-0e8bc98707b0cc6ca"
   availability_zone = "ap-southeast-1a"
   instance_type     = "t2.micro"
   key_name          = "lsitc-sin-demo-prod"
@@ -23,7 +23,7 @@ resource "aws_instance" "lsi-tfdemo-web-prd-a-hjkim" {
 
 #app_server 생성
 resource "aws_instance" "lsi-tfdemo-app-prd-a-hjkim" {
-  ami               = "ami-0d058fe428540cd89"
+  ami               = "ami-099604c1bc47f3b93"
   availability_zone = "ap-southeast-1a"
   instance_type     = "t2.micro"
   key_name          = "lsitc-sin-demo-prod"
@@ -43,7 +43,7 @@ resource "aws_instance" "lsi-tfdemo-app-prd-a-hjkim" {
 }
 
 resource "aws_instance" "lsi-tfdemo-app-prd-c-hjkim" {
-  ami               = "ami-0d058fe428540cd89"
+  ami               = "ami-099604c1bc47f3b93"
   availability_zone = "ap-southeast-1c"
   instance_type     = "t2.micro"
   key_name          = "lsitc-sin-demo-prod"
